@@ -1,11 +1,12 @@
 /**
  * Credit Card Checker
- * 15 of may, 2021
+ * 15th of may, 2021
  * by Mikheltodd
  *
  * This is a project proposed by Codecademy for JavaScript practice.
  * It requires to create some functions for evaluating credit cards numbers using the Luhn's Algorithm.
  * Some data are given to test the functions.
+ * Testing of functions appear as comments.
  */
 
 // Some valid credit card numbers
