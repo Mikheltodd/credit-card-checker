@@ -161,12 +161,23 @@ const idInvalidCardCompanies = (batch) => {
  * strToCardNumber function
  * This function takes a string of numbers and converts it in an array of numbers.
  */
+// const strToCardNumber = (strNumber) => {
+//   let cardNumber = [];
+//   let number = parseInt(strNumber);
+//   let n = strNumber.length;
+//   for (let i = 0; i < n; i++) {
+//     cardNumber.push(Math.floor((number / Math.pow(10, n - 1 - i)) % 10));
+//   }
+//   return cardNumber;
+// };
+
+// V2.0 (Following lucic4869336290 suggestion)
+
 const strToCardNumber = (strNumber) => {
   let cardNumber = [];
-  let number = parseInt(strNumber);
   let n = strNumber.length;
   for (let i = 0; i < n; i++) {
-    cardNumber.push(Math.floor((number / Math.pow(10, n - 1 - i)) % 10));
+    cardNumber.push(parseInt(strNumber[i]));
   }
   return cardNumber;
 };
@@ -183,6 +194,8 @@ const strToCardNumber = (strNumber) => {
  */
 let strCard = "4929202922194644";
 let numCard = strToCardNumber(strCard);
+console.log(strCard);
+console.log(numCard);
 console.log(validateCred(numCard));
 
 /**
